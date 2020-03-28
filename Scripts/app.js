@@ -1,3 +1,9 @@
+/**
+ * Author: Josh Bakos
+ * Student ID: 100652490
+ * Date Completed: 2020-03-27
+ */
+
 class Contact
 {
     constructor(contactName = "", emailAddress = "", contactNumber = "", contactMessage = "")
