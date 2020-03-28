@@ -52,6 +52,8 @@ let app;
         Main();
     }
 
+    
+
     function PageSwitcher()
     {
         let name = window.location.pathname;
@@ -388,6 +390,8 @@ let app;
 
     function DisplayTaskList()
     {
+        
+
         document.title = "WEBD6201 - Task List";
 
         // Task 1 a
@@ -433,7 +437,19 @@ let app;
                 $(this).closest("li").remove();
             }    
         });
+        
     }
+
+    // I think this function manages to fulfil part 2b and 2c
+    // Add event listener on click
+    document.addEventListener('click', function(e) {
+
+        // Check what the target id is
+        if (e.target.id === "taskListButton") {
+            // Use the LoadPageContent function to load up the tasklist content
+            LoadPageContent("mainContent", "./Views/content/tasklist.html", DisplayTaskList)
+        }
+    });
 
     /**
      * Main Program entry point is here
